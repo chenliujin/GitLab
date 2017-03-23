@@ -26,3 +26,6 @@ gitlab_rails['smtp_authentication'] = "plain"
 gitlab_rails['smtp_enable_starttls_auto'] = true
 $ gitlab-ctl reconfigure
 ```
+
+# 参考文献
+- [使用docker运行gitlab服务](http://blog.csdn.net/felix_yujing/article/details/52139070)
