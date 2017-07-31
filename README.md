@@ -4,7 +4,7 @@
 - master
 - 除 master 外的 branch
 
-## 查看分支
+## 1. 查看分支
 
 ### 查看本地所属分支
 ```
@@ -17,7 +17,7 @@ $ git branch --list -r
 ```
 
 
-## 分支创建
+## 2. 分支创建
 
 ```
 $ git branch testing 
@@ -30,12 +30,12 @@ $ git checkout -b testing master
 ```
 
 
-## 分支切换
+## 3. 分支切换
 ```
 $ git checkout testing
 ```
 
-## 分支提交
+## 4. 分支提交
 
 ```
 $ git push origin testing
@@ -43,7 +43,7 @@ $ git push origin testing
 
 
 
-# 分支的合并（merge）
+## 5. 分支的合并（merge）
 1. 选择要合并到的 branch，如 master
 1. 合并指定的 branch，如 testing 
 
@@ -53,7 +53,7 @@ $ git checkout mastter
 $ git merge --no-ff testing 
 ```
 
-# 删除远程分支
+## 6. 删除远程分支
 
 ```
 $ git push --delete origin testing
@@ -65,35 +65,37 @@ $ git push --delete origin testing
 rm -f .git/refs/remotes/origin/testing
 ```
 
+## 7. bug fix
+- issue -> New branch
+- Create Merge Request
+
+
+
 ---
 
 # tag
 
-## 版本号
+## 1. 版本号
 
-## 打标签
+## 2. 打标签
 ```
 $ git tag -a 1.0.0 -m 'v1.0.0'
 $ git show 1.0.0
 $ git push origin 1.0.0
 ```
 
-## 获取指定 tag 的代码
+## 3. 获取指定 tag 的代码
 ```
 $ git checkout 1.0.0
 ```
 
-## 删除 tag
+## 4. 删除 tag
 ```
 $ git push --delete origin 1.0.0
 ```
 
 ---
 
-
-# bug fix
-- issue -> New branch
-- Create Merge Request
 
 
 
