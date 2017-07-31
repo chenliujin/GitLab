@@ -103,7 +103,7 @@ $ git push --delete origin 1.0.0
 ## 历史版本（Changelog.txt）
 
 ```
-# Release 1.2.0
+# Release 1.0.0
 Released: 2017-07-31
 
 ## Major change
