@@ -30,7 +30,7 @@ $ git checkout -b testing master
 ```
 
 
-## 3. 分支切换
+## 3. 分支切换/选择
 ```
 $ git checkout testing
 ```
