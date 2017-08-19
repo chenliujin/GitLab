@@ -49,7 +49,7 @@ $ git push origin testing
 
 把 testing branch 的代码合并回 master:
 ```
-$ git checkout mastter
+$ git checkout master
 $ git merge --no-ff testing 
 ```
 
