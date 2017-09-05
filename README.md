@@ -1,4 +1,9 @@
 
+# 升级
+- https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/8.4-to-8.5.md
+
+
+
 
 # branch
 - master
