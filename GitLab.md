@@ -1,3 +1,11 @@
+
+
+```
+$ useradd -m datasync
+$ 
+```
+
+
 # 备份
 ```
 $ gitlab-rake gitlab:backup:create
@@ -29,3 +37,4 @@ $ gitlab-ctl reconfigure
 
 # 参考文献
 - [使用docker运行gitlab服务](http://blog.csdn.net/felix_yujing/article/details/52139070)
+- [Installing GitLab on Kubernetes](http://docs.gitlab.com/ce/install/kubernetes/)
