@@ -94,10 +94,27 @@ $ git push origin 1.0.0
 $ git checkout 1.0.0
 ```
 
-## 4. 删除 tag
+## 4. 删除 Tag
+
+### 删除远程 tag
+
 ```
 $ git push --delete origin 1.0.0
 ```
+
+### 删除本地 Tag
+
+```
+$ git push --delete 1.0.0
+```
+
+## 5. 重命名 Tag
+
+```
+$ git tag 1.0.0-beta.0 1.0.0-alpha.0
+$ git tag --delete 1.0.0-alpha.0
+```
+
 
 ---
 
