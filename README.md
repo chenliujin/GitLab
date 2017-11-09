@@ -118,6 +118,16 @@ $ git tag --delete 1.0.0-alpha.0
 
 ---
 
+# 回滚
+
+```
+$ git checkout master
+$ git merge --no-ff develop
+$ git reset --hard //回滚 merge 操作
+```
+
+---
+
 
 
 
