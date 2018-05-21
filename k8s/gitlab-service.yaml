@@ -7,8 +7,8 @@ spec:
     - name: http
       port: 80 
       protocol: TCP
-      targetPort: 80 
+      targetPort: 10080 
     - name: ssh
       port: 22 
       protocol: TCP
-      targetPort: 22 
+      targetPort: 10022 

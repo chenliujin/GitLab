@@ -7,5 +7,7 @@ subsets:
   - addresses:
     - ip: 10.1.0.32
     ports:
-      - port: 80 
-      - port: 22 
+      - name: http
+        port: 10080 
+      - name: ssh
+        port: 10022 
