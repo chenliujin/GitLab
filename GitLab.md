@@ -1,17 +1,5 @@
 
 
-```
-$ useradd -m datasync
-$ 
-```
-
-
-# 备份
-```
-$ gitlab-rake gitlab:backup:create
-$ cd /var/opt/gitlab/backups
-```
-
 # ssh
 ```
 $ vim /etc/gitlab/gitlab.rb

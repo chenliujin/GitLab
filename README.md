@@ -1,3 +1,24 @@
+# 备份
+```
+$ gitlab-rake gitlab:backup:create
+$ cd /var/opt/gitlab/backups
+```
+
+---
+
+# 还原
+
+- 先运行原来版本的 gitlab
+- 将备份文件拷贝到备份路径：/var/opt/gitlab/backups/，修改权限 `chmod 777 xxx_gitlab_backup.rar`
+- 运行起来后在容器里面还原
+
+```
+$ gitlab-rake gitlab:backup:restore BACKUP=1526912928_2018_05_21
+```
+
+---
+
+
 
 # 升级
 - https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/8.4-to-8.5.md
