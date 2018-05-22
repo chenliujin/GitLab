@@ -18,11 +18,20 @@ $ gitlab-rake gitlab:backup:restore BACKUP=1526912928_2018_05_21
 
 ---
 
-
-
 # 升级
+
+- 下载最新的 gitlab image
+- docker run
+- 重新配置
+
+```
+$ /opt/gitlab/bin/gitlab-ctl reconfigure
+$ /opt/gitlab/bin/gitlab-ctl restart
+```
+
 - https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/8.4-to-8.5.md
 
+---
 
 
 
