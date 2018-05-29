@@ -1,3 +1,40 @@
+# proxy
+
+$ vim /etc/gitlab/gitlab.rb
+
+```
+external_url 'http://www.chenliujin.com/gitlab'
+```
+
+```
+$ gitlab-ctl reconfigure
+$ gitlab-ctl restart
+```
+
+## nginx
+
+```
+server {
+  listen 80;
+  server_name www.chenliujin.com;
+  location /gitlab {
+    client_max_body_size 1024m; # 设置最大允许上传单个的文件大小
+    proxy_redirect off;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_pass http://127.0.0.1:8080/gitlab;
+    index index.html index.htm;
+  }
+}
+```
+
+---
+
+
+
+
+
 # 备份
 ```
 $ gitlab-rake gitlab:backup:create
