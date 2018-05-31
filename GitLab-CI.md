@@ -77,7 +77,7 @@ test:
 
 - project > setting > Variables
 
-等陆私有仓库后设置 
+登陆私有仓库后设置 
 
 Key: DOCKER_AUTH_CONFIG 
 
