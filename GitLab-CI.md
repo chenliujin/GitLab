@@ -3,6 +3,24 @@
 - [Run GitLab Runner on a Kubernetes cluster](https://docs.gitlab.com/runner/install/kubernetes.html)
 - [Run GitLab Runner in a container](https://docs.gitlab.com/runner/install/docker.html)
 
+```
+gitlab-ci-multi-runner register
+
+
+
+```
+
+# executor
+- docker-ssh
+- parallels
+- shell
+- ssh
+- docker-ssh+machine
+- docker
+- virtualbox
+- docker+machine
+- kubernetes
+
 ---
 
 # 配置
