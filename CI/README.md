@@ -6,3 +6,10 @@
 - 打包
 - 单元测试
 - 部署
+
+
+## 单元测试
+
+- docker build
+- docker run -it --rm tests phpunit test.xml
+
