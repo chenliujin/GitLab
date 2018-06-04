@@ -32,7 +32,7 @@ phpunit
 - 安装 phpunit
 
 ```
-wget http://phar.phpunit.cn/phpunit-5.7.phar
+curl http://phar.phpunit.cn/phpunit-5.7.phar > phpunit-5.7.phar
 chmod +x phpunit-5.7.phar
 mv phpunit-5.7.phar /usr/local/bin/phpunit
 ```
@@ -40,6 +40,18 @@ mv phpunit-5.7.phar /usr/local/bin/phpunit
 ```
 composer require phpunit/phpunit
 ```
+
+
+- 根据 Dockerfile 构建 image
+- phpunit
+
+```
+docker run -it --rm test phpunit --version
+```
+
+- 测试通过后推送到镜像仓库
+
+
 
 - 执行测试
 - 构建 docker image
