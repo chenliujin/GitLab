@@ -62,8 +62,8 @@ check_interval = 0
 
 [[runners]]
   name = "docker"
-  url = "https://g5.iot-sw.net/"
-  token = "71eadc4c9938f288d9a5ad7f49f47e"
+  url = "https://github.com/"
+  token = "72b154cb8000f90921e16712a213da91"
   executor = "docker"
   [runners.docker]
     tls_verify = false
