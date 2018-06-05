@@ -121,3 +121,7 @@ Value: .docker/config.json
 
 - https://scarletsky.github.io/2016/07/29/use-gitlab-ci-for-continuous-integration/
 - https://segmentfault.com/a/1190000012279248
+- https://docs.gitlab.com/runner/configuration/advanced-configuration.html#using-a-private-container-registry
+- https://docs.gitlab.com/runner/executors/docker.html
+- https://docs.gitlab.com/ce/ci/docker/using_docker_images.html#define-an-image-from-a-private-docker-registry
+- https://docs.gitlab.com/ee/ci/examples/php.html
