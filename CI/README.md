@@ -11,7 +11,12 @@
 ## 单元测试
 
 ```
- - docker build -t tests -f <project>/Dockerfile.tests . 
- - docker run -i --rm tests phpunit /opt/<project>/tests/test.xml
+image: docker:1.13.1
+
+test:
+  script:
+    - cd ..
+    - docker build -t tests -f <project>/Dockerfile.tests . 
+    - docker run -i --rm tests phpunit /opt/<project>/tests/test.xml
 ```
 
