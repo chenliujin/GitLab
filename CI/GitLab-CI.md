@@ -105,3 +105,4 @@ Value: .docker/config.json
 # 参考文献
 
 - https://scarletsky.github.io/2016/07/29/use-gitlab-ci-for-continuous-integration/
+- https://segmentfault.com/a/1190000012279248
