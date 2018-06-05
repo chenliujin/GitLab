@@ -1,4 +1,22 @@
-# 安装 gitlab-runner
+# gitlab-runner
+
+## executor
+- docker-ssh
+- parallels
+- shell
+- ssh
+- docker-ssh+machine
+- docker
+- virtualbox
+- docker+machine
+- kubernetes
+
+## 安装 gitlab-runner
+
+版本：
+
+- gitlab/gitlab-runner:latest
+- gitlab-ce-8.15.2 使用版本 gitlab/gitlab-runner:v1.11.4 
 
 ```
 docker run \
@@ -9,9 +27,13 @@ docker run \
   -v /etc/gitlab-runner:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gitlab/gitlab-runner:v1.11.4
-  # gitlab/gitlab-runner:v9.5.1
 ```
 
+## 注册 gitlab-runner
+
+```
+gitlab-ci-multi-runner register
+```
 
 
 
@@ -27,28 +49,9 @@ docker run \
 
 # [GitLab Runner](https://docs.gitlab.com/runner/)
 
-## 版本
-- gitlab-ce-8.15.2 > gitlab/gitlab-runner:v1.11.4 
-
 
 - [Run GitLab Runner on a Kubernetes cluster](https://docs.gitlab.com/runner/install/kubernetes.html)
 - [Run GitLab Runner in a container](https://docs.gitlab.com/runner/install/docker.html)
-
-
-```
-gitlab-ci-multi-runner register
-```
-
-# executor
-- docker-ssh
-- parallels
-- shell
-- ssh
-- docker-ssh+machine
-- docker
-- virtualbox
-- docker+machine
-- kubernetes
 
 
 /etc/gitlab-runner/config.toml
@@ -83,14 +86,6 @@ check_interval = 0
 
 # [The Docker executor](https://docs.gitlab.com/runner/executors/docker.html) 
 
-
-```
-image: php:5.6
-
-test:
- script:
- - phpunit --configuration phpunit.xml 
-```
 
 ## 私有镜像仓库
 
