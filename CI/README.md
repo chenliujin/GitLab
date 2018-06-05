@@ -17,6 +17,5 @@ test:
   script:
     - docker build -t <project>:tests -f Dockerfile.tests . 
     - docker run -i --rm <project>:tests phpunit --configuration /opt/<project>/tests/phpunit.xml
-    - docker rmi <project>:tests
 ```
 
