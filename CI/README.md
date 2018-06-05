@@ -13,7 +13,7 @@
 - 在 docker 上跑单元测试 
 - 测试通过后推送到镜像仓库
 
-### 单元测试
+### 单元测试`.gitlab-ci.yml `
 
 ```
 image: docker:latest
