@@ -52,6 +52,27 @@ docker:latest
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 ```
 
+/etc/gitlab-runner/config.toml
+
+```
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "docker"
+  url = "https://github.com/"
+  token = "72b154cb8000f90921e16712a213da91"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker:latest"
+    privileged = true
+    pull_policy = "if-not-present"
+    disable_cache = false
+    volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
+  [runners.cache]
+```
+
 
 
 
@@ -70,27 +91,6 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 - [Run GitLab Runner on a Kubernetes cluster](https://docs.gitlab.com/runner/install/kubernetes.html)
 - [Run GitLab Runner in a container](https://docs.gitlab.com/runner/install/docker.html)
 
-
-/etc/gitlab-runner/config.toml
-
-```
-concurrent = 1
-check_interval = 0
-
-[[runners]]
-  name = "docker"
-  url = "https://github.com/"
-  token = "72b154cb8000f90921e16712a213da91"
-  executor = "docker"
-  [runners.docker]
-    tls_verify = false
-    image = "docker:latest"
-    privileged = true
-    pull_policy = "if-not-present"
-    disable_cache = false
-    volumes = ["/cache", "/usr/bin/docker:/usr/bin/docker", "/var/run/docker.sock:/var/run/docker.sock"]
-  [runners.cache]
-```
 
 
 
