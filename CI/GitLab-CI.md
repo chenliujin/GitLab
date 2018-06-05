@@ -9,9 +9,6 @@
 
 ```
 gitlab-ci-multi-runner register
-
-
-
 ```
 
 # executor
@@ -26,51 +23,35 @@ gitlab-ci-multi-runner register
 - kubernetes
 
 
-
-phpunit
-
-- 安装 phpunit
+/etc/gitlab-runner/config.toml
 
 ```
-curl http://phar.phpunit.cn/phpunit-5.7.phar > phpunit-5.7.phar
-chmod +x phpunit-5.7.phar
-mv phpunit-5.7.phar /usr/local/bin/phpunit
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "docker"
+  url = "https://g5.iot-sw.net/"
+  token = "71eadc4c9938f288d9a5ad7f49f47e"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker:latest"
+    privileged = true
+    pull_policy = "if-not-present"
+    disable_cache = false
+    volumes = ["/cache", "/usr/bin/docker:/usr/bin/docker", "/var/run/docker.sock:/var/run/docker.sock"]
+  [runners.cache]
 ```
 
-```
-composer require phpunit/phpunit
-```
 
-
-- 根据 Dockerfile 构建 image
-- phpunit
-
-```
-docker run -it --rm test phpunit --version
-```
-
-- 测试通过后推送到镜像仓库
-
-
-
-- 执行测试
-- 构建 docker image
-
-yum install -y composer
 
 
 ---
 
 # 配置
-- `.gitlab-ci.yml`
 
-```
-- ls
-
-//部署代码（注意目标路径的权限）
-- rsync -avz ActiveRecord /usr/lib/php/pear/
-- phpunit --configuration phpunit.xml
-```
+`.gitlab-ci.yml`
 
 # [The Docker executor](https://docs.gitlab.com/runner/executors/docker.html) 
 
