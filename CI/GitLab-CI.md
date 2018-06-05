@@ -33,6 +33,23 @@ docker run \
 
 ```
 gitlab-ci-multi-runner register
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
+https://gitlab.chenliujin.com/
+Please enter the gitlab-ci token for this runner: # https://gitlab.chenliujin.com/admin/runners
+xxxxxx
+Please enter the gitlab-ci description for this runner:
+[f914ea57a101]: donald
+Please enter the gitlab-ci tags for this runner (comma separated):
+donald
+Whether to run untagged builds [true/false]:
+[false]: true
+Registering runner... succeeded                     runner=B_KAXHWX
+Please enter the executor: parallels, ssh, docker-ssh+machine, kubernetes, docker, docker-ssh, shell, virtualbox, docker+machine:
+docker
+Please enter the default Docker image (e.g. ruby:2.1):
+docker:latest
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 ```
 
 
