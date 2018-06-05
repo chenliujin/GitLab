@@ -10,6 +10,6 @@
 
 ## 单元测试
 
-- docker build -t tests -f console-api/Dockerfile.tests . 
+- docker build -t tests -f <project>/Dockerfile.tests . 
 - docker run -it --rm tests phpunit /opt/<project>/tests/test.xml
 
