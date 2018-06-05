@@ -16,7 +16,7 @@ image: docker:1.13.1
 test:
   script:
     - docker build -t <project>:tests -f Dockerfile.tests . 
-    - docker run -i --rm <project>:tests phpunit /opt/<project>/tests/test.xml
+    - docker run -i --rm <project>:tests phpunit --configuration /opt/<project>/tests/phpunit.xml
     - docker rmi <project>:tests
 ```
 
