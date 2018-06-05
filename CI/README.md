@@ -7,8 +7,13 @@
 - 单元测试
 - 部署
 
+## Docker
 
-## 单元测试
+- 根据 Dockerfile 构建 image
+- 在 docker 上跑单元测试 
+- 测试通过后推送到镜像仓库
+
+### 单元测试
 
 ```
 image: docker:1.13.1
