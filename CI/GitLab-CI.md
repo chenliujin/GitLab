@@ -1,3 +1,30 @@
+# 安装 gitlab-runner
+
+```
+docker run \
+  -d \
+  --name=gitlab-runner \
+  --restart=always \
+  --privileged=true \
+  -v /etc/gitlab-runner:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:v1.11.4
+  # gitlab/gitlab-runner:v9.5.1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # [GitLab Runner](https://docs.gitlab.com/runner/)
 
 ## 版本
@@ -6,6 +33,7 @@
 
 - [Run GitLab Runner on a Kubernetes cluster](https://docs.gitlab.com/runner/install/kubernetes.html)
 - [Run GitLab Runner in a container](https://docs.gitlab.com/runner/install/docker.html)
+
 
 ```
 gitlab-ci-multi-runner register
