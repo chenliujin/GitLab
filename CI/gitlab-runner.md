@@ -73,6 +73,8 @@ check_interval = 0
   [runners.cache]
 ```
 
+---
+
 
 
 
@@ -96,10 +98,6 @@ check_interval = 0
 
 
 ---
-
-# 配置
-
-`.gitlab-ci.yml`
 
 # [The Docker executor](https://docs.gitlab.com/runner/executors/docker.html) 
 
