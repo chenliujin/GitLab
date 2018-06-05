@@ -16,7 +16,7 @@
 ### 单元测试
 
 ```
-image: docker:1.13.1
+image: docker:latest
 
 test:
   script:
