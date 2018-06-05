@@ -52,7 +52,7 @@ docker:latest
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 ```
 
-/etc/gitlab-runner/config.toml
+vim /etc/gitlab-runner/config.toml
 
 ```
 concurrent = 1
