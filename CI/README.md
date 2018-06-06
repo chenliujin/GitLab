@@ -49,3 +49,7 @@ stages:
   - test
   - deploy
 ```
+
+# 参考文献
+
+- https://www.jianshu.com/p/705428ca1410
