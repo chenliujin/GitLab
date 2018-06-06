@@ -19,11 +19,33 @@
 ```
 image: docker:latest
 
-test:
+stages:
+  - build
+  - test
+
+build:
+  stage: build
   script:
     - docker build -t <project>:tests -f Dockerfile.tests . 
+  tags:
+    - docker
+
+test:
+  stage: test
+  script:
     - docker run -i --rm <project>:tests phpunit --configuration /opt/<project>/tests/phpunit.xml
   tags:
     - docker
 ```
 
+# yml
+
+- stages
+- jobs
+
+```
+stages:
+  - build
+  - test
+  - deploy
+```
