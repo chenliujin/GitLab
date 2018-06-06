@@ -41,7 +41,7 @@ xxxxxx
 Please enter the gitlab-ci description for this runner:
 [f914ea57a101]: donald
 Please enter the gitlab-ci tags for this runner (comma separated):
-donald
+docker
 Whether to run untagged builds [true/false]:
 [false]: true
 Registering runner... succeeded                     runner=B_KAXHWX
@@ -72,6 +72,10 @@ check_interval = 0
     volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
   [runners.cache]
 ```
+
+说明：
+
+- gitlab-ci tags，在项目构建流程 yml 文件里面指定tag，就使用这个 tag 的 runner 进行 CI；
 
 ---
 
