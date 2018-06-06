@@ -75,7 +75,7 @@ check_interval = 0
 
 说明：
 
-- gitlab-ci tags，在项目构建流程 yml 文件里面指定tag，就使用这个 tag 的 runner 进行 CI；
+- gitlab-ci tags，在项目构建流程 yml 文件里面指定 tag，就使用这个 tag 的 runner 进行 CI；
 
 ---
 
