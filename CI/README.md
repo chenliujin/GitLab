@@ -19,20 +19,9 @@
 ```
 image: docker:latest
 
-stages:
-  - build
-  - test
-
-build:
-  stage: build
+test:
   script:
     - docker build -t <project>:tests -f Dockerfile.tests . 
-  tags:
-    - docker
-
-test:
-  stage: test
-  script:
     - docker run -i --rm <project>:tests phpunit --configuration /opt/<project>/tests/phpunit.xml
   tags:
     - docker
