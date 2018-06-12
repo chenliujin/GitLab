@@ -70,6 +70,13 @@ $ /opt/gitlab/bin/gitlab-ctl restart
 
 ---
 
+# 中文 
+
+```
+docker pull twang2218/gitlab-ce-zh:latest
+```
+
+---
 
 
 # branch
