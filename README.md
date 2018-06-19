@@ -38,6 +38,12 @@ nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.crt"
 nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.key"
 ```
 
+## nginx
+
+```
+    proxy_pass https://127.0.0.1:10443;
+```
+
 ---
 
 
