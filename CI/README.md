@@ -27,6 +27,18 @@ test:
     - docker
 ```
 
+# 针对 git tag 进行 CI
+
+- 在 gitlab 中设置 Trigger: Tag push events
+- Add to .gitlab-ci.yml tags:
+
+```
+myjob:
+  script: test
+  only:
+  - tags
+```
+
 # yml
 
 - stages
